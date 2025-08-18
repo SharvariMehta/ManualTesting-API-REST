@@ -39,7 +39,7 @@ The focus is to showcase **end-to-end API validation skills** using **Postman co
 
 ```bash
 📦 restful-booker-api-testing
- ┣ 📂 Postman_Collections   # Exported Postman collections
+ ┣ 📂 Postman Collections   # Exported Postman collections
  ┣ 📂 TestCases             # Excel test cases + RTM
  ┣ 📂 Reports               # Test execution & performance results
  ┣ 📜 README.md             # Project documentation
