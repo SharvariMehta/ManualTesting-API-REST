@@ -40,8 +40,10 @@ The focus is to showcase **end-to-end API validation skills** using **Postman co
 ```bash
 📦 restful-booker-api-testing
  ┣ 📂 Postman Collections   # Exported Postman collections
- ┣ 📂 TestCases             # Excel test cases + RTM
- ┣ 📂 Reports               # Test execution & performance results
+ ┣ 📄 Requirement.docx      # Requirement Document
+ ┣ 📄 TestPlan.docx         # Detailed test plan
+ ┣ 📄 TestCases.xlsx        # Designed test cases + RTM
+ ┣ 📂 Reports               # Test execution results
  ┣ 📜 README.md             # Project documentation
 ```
 
@@ -60,24 +62,6 @@ The focus is to showcase **end-to-end API validation skills** using **Postman co
 
 ---
 
-## 📸 API Flow (Mermaid Diagram)
-
-```mermaid
-sequenceDiagram
-    participant Tester
-    participant API
-    Tester->>API: POST /auth (Get Token)
-    Tester->>API: POST /booking (Create Booking)
-    API-->>Tester: Returns Booking ID
-    Tester->>API: GET /booking/{id}
-    Tester->>API: PUT /booking/{id} (Full Update)
-    Tester->>API: PATCH /booking/{id} (Partial Update)
-    Tester->>API: DELETE /booking/{id}
-    API-->>Tester: Success / Error Response
-```
-
----
-
 ## 🌟 Outcome
 
 This project validates **API testing expertise** across multiple dimensions – functional, negative, boundary, and performance.
@@ -85,7 +69,8 @@ It demonstrates strong skills in **Postman, Test Case Design, RTM, and Response 
 
 ---
 
-## 🙋‍♂️ Let's Connect
+## 🙋‍♀️ Let’s Connect 👩‍💻
 
-Feel free to explore, fork, or suggest improvements!  
-📧 [sharvarimehta97@gmail.com] | 💼 [linkedin.com/in/sharvarimehta]
+- 📧 **Email:** [sharvarimehta97@gmail.com](mailto:sharvarimehta97@gmail.com)
+- 💼 **LinkedIn:** [linkedin.com/in/sharvarimehta](https://www.linkedin.com/in/sharvarimehta) 
+- 🔗 **Postman Profile:** [postman.com/sharvarimehta](https://www.postman.com/sharvarimehta)
