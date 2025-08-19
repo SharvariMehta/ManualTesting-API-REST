@@ -170,12 +170,18 @@
 					},
 					{
 						"key": "Cookie",
-						"value": "token=e13932f1f846f92"
+						"value": "token=3bca03fce3e4ce3"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{vault:authorization-password}}",
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Black\"\r\n}",
+					"raw": "{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Blue\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
