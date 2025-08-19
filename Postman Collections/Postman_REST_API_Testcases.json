@@ -151,6 +151,13 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "{{vault:authorization-password}}",
+						"username": "admin"
+					}
+				},
 				"method": "PATCH",
 				"header": [
 					{
@@ -163,12 +170,12 @@
 					},
 					{
 						"key": "Cookie",
-						"value": "token=abc123"
+						"value": "token=e13932f1f846f92"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\"\r\n}",
+					"raw": "{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Black\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
