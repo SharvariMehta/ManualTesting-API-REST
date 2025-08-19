@@ -271,15 +271,11 @@
 			"response": []
 		}
 	],
-	"auth": {
-		"type": "basic",
-		"basic": {}
-	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "03e2e6aa-629b-42bd-87b6-2f945323b10b",
+				"id": "a6ddf987-605b-4498-ac61-df159b64aeed",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -290,7 +286,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "7d18a250-3214-4a25-b98d-33185b9612c6",
+				"id": "d4007f4d-0c89-4110-a39f-828f82e76372",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
