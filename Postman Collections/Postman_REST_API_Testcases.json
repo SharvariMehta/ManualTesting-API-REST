@@ -123,23 +123,10 @@
 					}
 				},
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Accept",
-						"value": "application/json"
-					},
-					{
-						"key": "Cookie",
-						"value": "token=abc123"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"bookingid\": 99,\r\n    \"booking\": {\r\n        \"firstname\" : \"James\",\r\n        \"lastname\" : \"Brown\",\r\n        \"totalprice\" : 111,\r\n        \"depositpaid\" : true,\r\n        \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n        },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"bookingid\": 1066,\r\n    \"booking\": {\r\n        \"firstname\" : \"James\",\r\n        \"lastname\" : \"Brown\",\r\n        \"totalprice\" : 111,\r\n        \"depositpaid\" : true,\r\n        \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n        },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -147,7 +134,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://restful-booker.herokuapp.com/booking/1?id=99",
+					"raw": "https://restful-booker.herokuapp.com/booking/1?Authorization=Basic YWRtaW46cGFzc3dvcmQxMjM=]",
 					"protocol": "https",
 					"host": [
 						"restful-booker",
@@ -160,8 +147,9 @@
 					],
 					"query": [
 						{
-							"key": "id",
-							"value": "99"
+							"key": "Authorization",
+							"value": "Basic YWRtaW46cGFzc3dvcmQxMjM=]",
+							"type": "text"
 						}
 					]
 				},
