@@ -125,10 +125,9 @@
 				"method": "PUT",
 				"header": [
 					{
-						"key": "Authorization",
-						"value": "{{vault:basic-auth}}",
-						"type": "text",
-						"disabled": true
+						"key": "Cookie",
+						"value": "token=629f649312b55e2",
+						"type": "text"
 					}
 				],
 				"body": {
