@@ -98,6 +98,17 @@
 							"    let authHeader = pm.request.headers.get(\"Authorization\");\r",
 							"    pm.expect(authHeader).to.be.undefined;\r",
 							"});\r",
+							"\r",
+							"//pm.globals.set(\"name\",\"SharvariMehta\");\r",
+							"console.log(pm.globals.get(\"name\"));\r",
+							"pm.collectionVariables.set(\"c_name\",\"RajeshMehta\");\r",
+							"console.log(pm.collectionVariables.get(\"c_name\"));\r",
+							"/* \r",
+							"Console Output :\r",
+							"SharvariMehta\r",
+							"RajeshMehta\r",
+							"*/\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript",
@@ -119,7 +130,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
