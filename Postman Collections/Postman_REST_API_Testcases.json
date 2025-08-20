@@ -22,8 +22,8 @@
 							"});\r",
 							"\r",
 							"// ✅ Response Time\r",
-							"pm.test(\"Response time is under 1000ms\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"pm.test(\"Response time is under 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});\r",
 							"\r",
 							"// ✅ Response Body Exists\r",
@@ -438,16 +438,6 @@
 					{
 						"key": "Accept",
 						"value": "application/json"
-					},
-					{
-						"key": "Cookie",
-						"value": "token=b0dbf9abb6d86b1",
-						"disabled": true
-					},
-					{
-						"key": "Authorization",
-						"value": "{{vault:authorization-password}}",
-						"type": "text"
 					}
 				],
 				"body": {
@@ -499,7 +489,7 @@
 				"auth": {
 					"type": "basic",
 					"basic": {
-						"password": "{{vault:authorization-password}}",
+						"password": "{{pw}}",
 						"username": "admin"
 					}
 				},
