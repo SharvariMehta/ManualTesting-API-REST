@@ -226,7 +226,13 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "",
@@ -303,11 +309,50 @@
 		},
 		{
 			"name": "TC5_UpdateBooking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "82b6f1bc-857b-4522-b123-615baf0cf63b",
+						"exec": [
+							"// ---------------------- Basic Checks ----------------------\r",
+							"\r",
+							"// ✅ Status Code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// ✅ Response Time\r",
+							"pm.test(\"Response time is under 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"// ---------------------- Header & Cookies ----------------------\r",
+							"\r",
+							"// ✅ Headers\r",
+							"pm.test(\"Content-Type header is application/json\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "2ab76e94-2e4d-4857-93dd-fc49dbc06e99",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password123",
+						"username": "admin"
+					}
+				},
 				"method": "PUT",
 				"header": [
 					{
@@ -339,13 +384,49 @@
 		},
 		{
 			"name": "TC6_PartialUpdateBooking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c1a60216-0b1e-402b-a7c2-2fd6f7724dae",
+						"exec": [
+							"// ---------------------- Basic Checks ----------------------\r",
+							"\r",
+							"// ✅ Status Code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// ✅ Response Time\r",
+							"pm.test(\"Response time is under 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"// ---------------------- Header & Cookies ----------------------\r",
+							"\r",
+							"// ✅ Headers\r",
+							"pm.test(\"Content-Type header is application/json\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "83f9cdc4-fa5b-4d56-be5a-bf1811a265d3",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"auth": {
-					"type": "noauth"
+					"type": "basic",
+					"basic": {
+						"password": "{{vault:authorization-password}}",
+						"username": "admin"
+					}
 				},
 				"method": "PATCH",
 				"header": [
@@ -384,11 +465,43 @@
 		},
 		{
 			"name": "TC7_DeleteBooking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "34156eb8-3610-420d-8cf3-5a0752ea647d",
+						"exec": [
+							"// ---------------------- Basic Checks ----------------------\r",
+							"\r",
+							"// ✅ Status Code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// ✅ Response Time\r",
+							"pm.test(\"Response time is under 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "4791b2e3-2318-4d6e-996d-b1d5bad2cfa0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "password123",
+						"username": "admin"
+					}
+				},
 				"method": "DELETE",
 				"header": [
 					{
@@ -434,6 +547,31 @@
 		},
 		{
 			"name": "TC8_HealthCheck",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3718a9cb-a000-4a74-8646-6fc662ea622c",
+						"exec": [
+							"// ---------------------- Basic Checks ----------------------\r",
+							"\r",
+							"// ✅ Status Code\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// ✅ Response Time\r",
+							"pm.test(\"Response time is under 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "b009543c-db67-4f9b-8a0e-08fc8be0668f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
