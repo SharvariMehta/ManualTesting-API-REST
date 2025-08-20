@@ -570,10 +570,17 @@
 	],
 	"variable": [
 		{
-			"id": "7dee6777-83e0-4b74-8290-dabee71c02ec",
 			"key": "pw",
 			"value": "",
 			"type": "default"
+		},
+		{
+			"key": "pw",
+			"value": ""
+		},
+		{
+			"key": "c_name",
+			"value": ""
 		}
 	]
 }
