@@ -349,7 +349,7 @@
 				"auth": {
 					"type": "basic",
 					"basic": {
-						"password": "password123",
+						"password": "{{pw}}",
 						"username": "admin"
 					}
 				},
@@ -365,7 +365,8 @@
 					},
 					{
 						"key": "Cookie",
-						"value": "token=abc123"
+						"value": "token=b0dbf9abb6d86b1",
+						"disabled": true
 					}
 				],
 				"body": {
@@ -424,7 +425,7 @@
 				"auth": {
 					"type": "basic",
 					"basic": {
-						"password": "{{vault:authorization-password}}",
+						"password": "{{pw}}",
 						"username": "admin"
 					}
 				},
@@ -440,13 +441,13 @@
 					},
 					{
 						"key": "Cookie",
-						"value": "token=eb47109948ec45b"
+						"value": "token=b0dbf9abb6d86b1",
+						"disabled": true
 					},
 					{
 						"key": "Authorization",
 						"value": "{{vault:authorization-password}}",
-						"type": "text",
-						"disabled": true
+						"type": "text"
 					}
 				],
 				"body": {
@@ -474,7 +475,7 @@
 							"// ---------------------- Basic Checks ----------------------\r",
 							"\r",
 							"// ✅ Status Code\r",
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
 							"});\r",
 							"\r",
@@ -498,7 +499,7 @@
 				"auth": {
 					"type": "basic",
 					"basic": {
-						"password": "password123",
+						"password": "{{vault:authorization-password}}",
 						"username": "admin"
 					}
 				},
@@ -607,6 +608,14 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7dee6777-83e0-4b74-8290-dabee71c02ec",
+			"key": "pw",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
