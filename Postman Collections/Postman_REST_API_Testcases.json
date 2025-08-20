@@ -99,7 +99,7 @@
 							"    pm.expect(authHeader).to.be.undefined;\r",
 							"});\r",
 							"\r",
-							";\r",
+							"\r",
 							"console.log(pm.globals.get(\"name\"));\r",
 							"pm.collectionVariables.set(\"c_name\",\"RajeshMehta\");\r",
 							"console.log(pm.collectionVariables.get(\"c_name\"));\r",
